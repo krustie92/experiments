@@ -75,7 +75,7 @@ function animate(data, model, thrusts, plots)
         xlabel('Time (s)');
         ylabel('Angular Velocity (rad/s)');
         title('Angular Velocity');
-
+        
         subplot(plots(3));
         multiplot(data, data.theta, t);
         xlabel('Time (s)');
@@ -94,7 +94,7 @@ function multiplot(data, values, ind)
     plot(times, values(1, :), 'r-', times, values(2, :), 'g.', times, values(3, :), 'b-.');
     
     % Set axes to remain constant throughout plotting.
-    xmin = min(data.t);
+    xmin = min(data.t); 
     xmax = max(data.t);
     ymin = 1.1 * min(min(values));
     ymax = 1.1 * max(max(values));
